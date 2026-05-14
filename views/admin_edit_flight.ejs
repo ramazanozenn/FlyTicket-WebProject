@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Flight - Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-dark shadow-sm" style="background-color: #0056b3;">
+    <div class="container">
+        <span class="navbar-brand fw-bold">EDIT FLIGHT</span>
+        <a href="/admin/dashboard" class="btn btn-outline-light btn-sm">Back to Dashboard</a>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <div class="card border-0 shadow-sm mx-auto" style="max-width: 600px;">
+        <div class="card-body p-4">
+            <form action="/admin/flights/update/<%= flight._id %>" method="POST">
+                <div class="mb-3">
+                    <label class="form-label fw-bold">From</label>
+                    <select name="from_city" class="form-select" required>
+                        <% cities.forEach(city => { %>
+                            <option value="<%= city.city_name %>" <%= flight.from_city === city.city_name ? 'selected' : '' %>><%= city.city_name %></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">To</label>
+                    <select name="to_city" class="form-select" required>
+                        <% cities.forEach(city => { %>
+                            <option value="<%= city.city_name %>" <%= flight.to_city === city.city_name ? 'selected' : '' %>><%= city.city_name %></option>
+                        <% }) %>
+                    </select>
+                </div>
+
+                <% 
+                    // TIMEZONE ÇÖZÜMÜ: Veritabanındaki UTC saatine +3 saat ekleyerek Türkiye saatine (TRT) çeviriyoruz
+                    const formatLocalTime = (dateObj) => {
+                        const d = new Date(dateObj);
+                        d.setHours(d.getHours() + 3); // Türkiye saati (UTC+3)
+                        return d.toISOString().slice(0, 16);
+                    };
+                %>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-bold">Departure</label>
+                        <input type="datetime-local" name="departure_time" class="form-control" value="<%= formatLocalTime(flight.departure_time) %>" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-bold">Arrival</label>
+                        <input type="datetime-local" name="arrival_time" class="form-control" value="<%= formatLocalTime(flight.arrival_time) %>" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-bold">Price (TL)</label>
+                        <input type="number" min="1" name="price" class="form-control" value="<%= flight.price %>" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-bold">Seats</label>
+                        <input type="number" min="1" name="seats_total" class="form-control" value="<%= flight.seats_total %>" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">UPDATE FLIGHT</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="modern-footer mt-5 p-3 text-center" style="background-color: #007bff; color: white;">
+    <div class="container">
+        <small>Developed by Ramazan Özen for CENG 3502 Dynamic Web Course</small>
+    </div>
+</footer>
+
+</body>
+</html>

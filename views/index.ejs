@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyTicket - Search Flights</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-primary mb-4 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fas fa-plane-departure me-2"></i>FlyTicket
+            </a>
+            <div class="ms-auto d-flex align-items-center">
+
+                <% if (user) { %>
+                    <span class="text-white me-3 small">
+                        <i class="fas fa-user-circle me-1"></i> Welcome, <strong>
+                            <%= user.name %>
+                        </strong>
+                    </span>
+                    <a href="/my-tickets" class="btn btn-info btn-sm rounded-pill fw-bold me-2 px-3 text-white">My
+                        Tickets</a>
+                    <a href="/logout" class="btn btn-light btn-sm rounded-pill fw-bold px-3"
+                        style="color: #007bff;">Logout</a>
+
+                    <% } else { %>
+                        <a href="/login" class="btn btn-outline-light btn-sm rounded-pill me-2 px-3">Login</a>
+                        <a href="/register" class="btn btn-light btn-sm rounded-pill px-3 fw-bold"
+                            style="color: #007bff;">Register</a>
+                        <% } %>
+
+                            <% if (typeof isAdmin !=='undefined' && isAdmin) { %>
+                                <a href="/admin/dashboard"
+                                    class="btn btn-danger btn-sm rounded-pill ms-3 fw-bold px-3">Admin Panel</a>
+                                <% } %>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card shadow-sm border-0 mb-5" style="border-radius: 15px;">
+            <div class="card-body p-4">
+                <h2 class="mb-4" style="font-weight: 700; color: #2c3e50;">🔍 Search Your Next Adventure</h2>
+
+                <form action="/" method="GET" class="row g-3">
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold text-secondary">Origin</label>
+                        <input type="text" name="origin" class="form-control" placeholder="City name..."
+                            value="<%= typeof origin !== 'undefined' ? origin : '' %>">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold text-secondary">Destination</label>
+                        <input type="text" name="destination" class="form-control" placeholder="City name..."
+                            value="<%= typeof destination !== 'undefined' ? destination : '' %>">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold text-secondary">Date</label>
+                        <input type="date" name="date" class="form-control"
+                            value="<%= typeof date !== 'undefined' ? date : '' %>">
+                    </div>
+                    <div class="col-md-3 d-flex align-items-end">
+                        <button type="submit" class="btn btn-primary w-100 shadow fw-bold">Search</button>
+                        <a href="/" class="btn btn-light ms-2 shadow-sm border" title="Clear Filters"><i
+                                class="fa-solid fa-rotate-right"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 mb-5">
+            <div class="card-body p-0">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="ps-4">Route</th>
+                            <th>Departure</th>
+                            <th>Price</th>
+                            <th>Availability</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (flights.length> 0) { %>
+                            <% flights.forEach(flight=> { %>
+                                <tr>
+                                    <td class="ps-4 fw-bold">
+                                        <%= flight.from_city %> <i
+                                                class="fa-solid fa-arrow-right mx-2 text-muted small"></i>
+                                            <%= flight.to_city %>
+                                    </td>
+                                    <td>
+                                        <div class="small text-muted">
+                                            <%= new Date(flight.departure_time).toDateString() %>
+                                        </div>
+                                        <div class="fw-bold">
+                                            <%= new Date(flight.departure_time).toLocaleTimeString([], {hour: '2-digit'
+                                                , minute:'2-digit'}) %>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge bg-success-subtle text-success border border-success-subtle">
+                                            <%= flight.price %> TL
+                                        </span></td>
+                                    <td>
+                                        <% if (flight.seats_available> 0) { %>
+                                            <small class="text-success fw-bold">
+                                                <%= flight.seats_available %> Seats Left
+                                            </small>
+                                            <% } else { %>
+                                                <small class="text-danger fw-bold">SOLD OUT</small>
+                                                <% } %>
+                                    </td>
+                                    <td class="text-center">
+                                        <% if (flight.seats_available> 0) { %>
+                                            <a href="/book/<%= flight._id %>"
+                                                class="btn btn-outline-primary btn-sm rounded-pill px-4 fw-bold">Book
+                                                Now</a>
+                                            <% } else { %>
+                                                <button
+                                                    class="btn btn-secondary btn-sm disabled rounded-pill px-4 fw-bold">Unavailable</button>
+                                                <% } %>
+                                    </td>
+                                </tr>
+                                <% }); %>
+                                    <% } else { %>
+                                        <tr>
+                                            <td colspan="5" class="text-center py-5 text-muted">No flights found
+                                                matching your search.</td>
+                                        </tr>
+                                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-container">
+                <a href="https://www.linkedin.com/in/ramazan-%C3%B6zen-6a6488336/" target="_blank"
+                    class="linkedin-logo">
+                    <i class="fab fa-linkedin" style="font-size: 24px; color: #0077b5;"></i>
+                </a>
+                <div class="footer-academic-text mt-2 text-muted small">
+                    Developed for <strong>CENG 3502 Dynamic Web Course</strong>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - FlyTicket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-light d-flex flex-column" style="min-height: 100vh;">
+
+<nav class="navbar navbar-dark shadow-sm">
+    <div class="container">
+        <span class="navbar-brand fw-bold">
+            <i class="fas fa-user-shield me-2"></i>FLY <span class="fw-light">ADMIN</span>
+        </span>
+        <div class="d-flex gap-2">
+            <a href="/" class="btn btn-outline-light btn-sm px-3">View Site</a>
+            <a href="/admin/logout" class="btn btn-danger btn-sm px-3" onclick="return confirm('Are you sure you want to logout?')">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-12 mb-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white border-0 py-3">
+                    <h5 class="mb-0 fw-bold text-primary"><i class="fas fa-plus-circle me-2"></i>Add New Flight</h5>
+                </div>
+                <div class="card-body">
+                    <form action="/admin/flights" method="POST" class="row g-3">
+                        <div class="col-md-3">
+                            <label class="form-label small fw-bold">Origin</label>
+                            <select name="from_city" class="form-select" required>
+                                <% cities.forEach(city => { %>
+                                    <option value="<%= city.city_name %>"><%= city.city_name %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label small fw-bold">Destination</label>
+                            <select name="to_city" class="form-select" required>
+                                <% cities.forEach(city => { %>
+                                    <option value="<%= city.city_name %>"><%= city.city_name %></option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label small fw-bold">Departure</label>
+                            <input type="datetime-local" name="departure_time" class="form-control" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label small fw-bold">Arrival</label>
+                            <input type="datetime-local" name="arrival_time" class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label small fw-bold">Price (TL)</label>
+                            <input type="number" name="price" class="form-control" placeholder="0.00" min="1" step="0.01" required 
+                                oninvalid="this.setCustomValidity('Price must be at least 1 TL')" 
+                                oninput="this.setCustomValidity('')">                        
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label small fw-bold">Total Seats</label>
+                            <input type="number" name="seats_total" class="form-control" placeholder="150" min="1" required 
+                                oninvalid="this.setCustomValidity('Total seats must be at least 1')" 
+                                oninput="this.setCustomValidity('')">                        
+                        </div>
+                        <div class="col-md-4 d-flex align-items-end">
+                            <button type="submit" class="btn btn-primary w-100 fw-bold py-2">CREATE FLIGHT</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 mb-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white border-0 py-3">
+                    <h5 class="mb-0 fw-bold text-dark"><i class="fas fa-plane-departure me-2"></i>Active Flights</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table align-middle mb-0">
+                        <thead class="bg-light">
+                            <tr>
+                                <th class="ps-4">Route</th>
+                                <th>Departure</th>
+                                <th>Arrival</th>
+                                <th>Price</th>
+                                <th class="text-end pe-4">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% flights.forEach(f => { %>
+                            <tr class="border-bottom">
+                                <td class="ps-4">
+                                    <span class="fw-bold"><%= f.from_city %></span> 
+                                    <i class="fas fa-long-arrow-alt-right mx-2 text-muted small"></i> 
+                                    <span class="fw-bold"><%= f.to_city %></span>
+                                </td>
+                                <td><%= new Date(f.departure_time).toLocaleString('tr-TR') %></td>
+                                <td><%= new Date(f.arrival_time).toLocaleString('tr-TR') %></td>
+                                <td class="fw-bold text-success"><%= f.price %> TL</td>
+                                <td class="text-end pe-4">
+                                    <div class="d-flex gap-2 justify-content-end">
+                                        <a href="/admin/flights/edit/<%= f._id %>" class="btn btn-outline-primary btn-sm">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <form action="/admin/flights/delete/<%= f._id %>" method="POST" onsubmit="return confirm('Delete this flight?')">
+                                            <button type="submit" class="btn btn-outline-danger btn-sm" title="Delete">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 mb-5">
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white border-0 py-3">
+                    <h5 class="mb-0 fw-bold text-dark"><i class="fas fa-ticket-alt me-2"></i>Recent Tickets</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="bg-light">
+                            <tr>
+                                <th class="ps-4">Passenger</th>
+                                <th>Email</th>
+                                <th>Flight Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% tickets.forEach(t => { %>
+                            <tr>
+                                <td class="ps-4"><%= t.passenger_name %> <%= t.passenger_surname %></td>
+                                <td><%= t.passenger_email %></td>
+                                <td>
+                                    <small class="text-muted fw-bold">
+                                        <%= t.flight ? t.flight.from_city + ' ➔ ' + t.flight.to_city : 'Unknown' %>
+                                    </small>
+                                </td>
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="modern-footer mt-auto">
+    <div class="container text-center">
+        <div class="footer-container">
+            <a href="https://www.linkedin.com/in/ramazan-%C3%B6zen-6a6488336/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <div class="footer-academic-text">
+                Developed for <strong>CENG 3502 Dynamic Web Course</strong>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
