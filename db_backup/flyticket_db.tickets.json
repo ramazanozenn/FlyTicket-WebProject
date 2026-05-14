@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "6a01c565d5846d262fb4e212"
+  },
+  "passenger_name": "almira",
+  "passenger_surname": "özen",
+  "passenger_email": "almira@gmail.com",
+  "flight": {
+    "$oid": "6a01b83a5fdda427064f874a"
+  },
+  "seat_number": "30F",
+  "pnr": "L0D49Q",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a05e9dce58a640dc8e37c55"
+  },
+  "passenger_name": "rmao",
+  "passenger_surname": "ramo",
+  "passenger_email": "ramazan.ozen07@icloud.com",
+  "flight": {
+    "$oid": "6a05e4b576674f2f071e83a2"
+  },
+  "seat_number": "27B",
+  "pnr": "YNS4U0",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a05eaf73866fe943e04c80e"
+  },
+  "passenger_name": "ramazan",
+  "passenger_surname": "özen",
+  "passenger_email": "ramazan.ozen07@icloud.com",
+  "flight": {
+    "$oid": "6a05e46e15b2a82d32eb451f"
+  },
+  "seat_number": "29A",
+  "pnr": "LUN0J7",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a063d7a3e8e6cd468d18588"
+  },
+  "passenger_name": "ramazan",
+  "passenger_surname": "özen",
+  "passenger_email": "ramazan.ozen07@icloud.com",
+  "flight": {
+    "$oid": "6a05e39015b2a82d32eb451c"
+  },
+  "seat_number": "15F",
+  "pnr": "NRXJ9X",
+  "__v": 0
+}]

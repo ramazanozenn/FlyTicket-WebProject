@@ -1,0 +1,238 @@
+[{
+  "_id": {
+    "$oid": "69f8e354de86d0382866e77f"
+  },
+  "from_city": "Artvin",
+  "to_city": "Artvin",
+  "departure_time": {
+    "$date": "2026-05-04T18:19:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-05T18:19:00.000Z"
+  },
+  "price": 100,
+  "seats_total": 1001,
+  "seats_available": 1001,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a01b83a5fdda427064f874a"
+  },
+  "from_city": "Muğla",
+  "to_city": "İzmir",
+  "departure_time": {
+    "$date": "2026-05-12T11:00:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-12T11:45:00.000Z"
+  },
+  "price": 990,
+  "seats_total": 123,
+  "seats_available": 113,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a01c6f967f42950ece9e050"
+  },
+  "from_city": "Adana",
+  "to_city": "Antalya",
+  "departure_time": {
+    "$date": "2026-05-11T12:42:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-11T12:45:00.000Z"
+  },
+  "price": 555,
+  "seats_total": 456,
+  "seats_available": 456,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a01c74e67f42950ece9e051"
+  },
+  "from_city": "Adana",
+  "to_city": "Ağrı",
+  "departure_time": {
+    "$date": "2026-05-11T12:45:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-11T12:48:00.000Z"
+  },
+  "price": -5,
+  "seats_total": 45,
+  "seats_available": 45,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a05e39015b2a82d32eb451c"
+  },
+  "from_city": "Erzincan",
+  "to_city": "İstanbul",
+  "departure_time": {
+    "$date": "2026-05-15T15:00:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-15T16:00:00.000Z"
+  },
+  "price": 666,
+  "seats_total": 666,
+  "seats_available": 665,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a05e3a515b2a82d32eb451d"
+  },
+  "from_city": "Erzincan",
+  "to_city": "Ağrı",
+  "departure_time": {
+    "$date": "2026-05-15T15:00:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-15T16:00:00.000Z"
+  },
+  "price": 5555,
+  "seats_total": 555,
+  "seats_available": 555,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a05e45a15b2a82d32eb451e"
+  },
+  "from_city": "Şırnak",
+  "to_city": "Adana",
+  "departure_time": {
+    "$date": "2026-05-16T15:03:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-16T16:03:00.000Z"
+  },
+  "price": 199,
+  "seats_total": 199,
+  "seats_available": 199,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a05e46e15b2a82d32eb451f"
+  },
+  "from_city": "Şırnak",
+  "to_city": "Amasya",
+  "departure_time": {
+    "$date": "2026-05-16T15:03:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-16T16:04:00.000Z"
+  },
+  "price": 4444,
+  "seats_total": 444,
+  "seats_available": 443,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a05e4b576674f2f071e83a2"
+  },
+  "from_city": "Antalya",
+  "to_city": "Adana",
+  "departure_time": {
+    "$date": "2026-05-25T15:05:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-25T16:05:00.000Z"
+  },
+  "price": 1919,
+  "seats_total": 1919,
+  "seats_available": 1918,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a05e55076674f2f071e83a3"
+  },
+  "from_city": "Batman",
+  "to_city": "Batman",
+  "departure_time": {
+    "$date": "2026-05-25T15:05:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-25T16:05:00.000Z"
+  },
+  "price": 1919,
+  "seats_total": 191919,
+  "seats_available": 191919,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a05e5a576674f2f071e83a4"
+  },
+  "from_city": "Adana",
+  "to_city": "Adana",
+  "departure_time": {
+    "$date": "2026-05-27T15:09:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-27T16:09:00.000Z"
+  },
+  "price": 343433,
+  "seats_total": 43434,
+  "seats_available": 43434,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a05e5f2bbc1c93d746b8300"
+  },
+  "from_city": "Ardahan",
+  "to_city": "Batman",
+  "departure_time": {
+    "$date": "2026-05-12T15:09:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-12T16:09:00.000Z"
+  },
+  "price": 111111,
+  "seats_total": 1111,
+  "seats_available": 1111,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a05e742bbe3eb1581d9c72e"
+  },
+  "from_city": "Düzce",
+  "to_city": "Adana",
+  "departure_time": {
+    "$date": "2026-05-27T15:05:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-28T16:05:00.000Z"
+  },
+  "price": 21361273,
+  "seats_total": 1,
+  "seats_available": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a0637a6007d310bcfe6801e"
+  },
+  "from_city": "Mersin",
+  "to_city": "Antalya",
+  "departure_time": {
+    "$date": "2026-05-16T16:59:00.000Z"
+  },
+  "arrival_time": {
+    "$date": "2026-05-16T20:59:00.000Z"
+  },
+  "price": 99,
+  "seats_total": 99,
+  "seats_available": 99,
+  "__v": 0
+}]

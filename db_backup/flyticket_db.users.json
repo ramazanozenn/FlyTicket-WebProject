@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "6a01b6ab5fdda427064f8748"
+  },
+  "name": "ramo",
+  "surname": "öz",
+  "email": "ramo@gmail.com",
+  "password": "$2b$10$nh9l1MLwnEA1UQ3MmyIOv.gzEWAaLkdSTRPKvBw5MPEvvt1YtkhPW",
+  "date": {
+    "$date": "2026-05-11T10:59:55.465Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a01b7695fdda427064f8749"
+  },
+  "name": "ramazan ",
+  "surname": "özen ",
+  "email": "ramazan.ozen07@icloud.com",
+  "password": "$2b$10$zVqJWnO9pjuFyZTm2AC/wOZkrUPkyhQ.45x7wdVBLcFKTX7qeYTwq",
+  "date": {
+    "$date": "2026-05-11T11:03:05.528Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,567 @@
+[{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff88"
+  },
+  "city_name": "Adana",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff89"
+  },
+  "city_name": "Adıyaman",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff8a"
+  },
+  "city_name": "Afyonkarahisar",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff8b"
+  },
+  "city_name": "Ağrı",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff8c"
+  },
+  "city_name": "Amasya",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff8d"
+  },
+  "city_name": "Ankara",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff8e"
+  },
+  "city_name": "Antalya",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff8f"
+  },
+  "city_name": "Artvin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff90"
+  },
+  "city_name": "Aydın",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff91"
+  },
+  "city_name": "Balıkesir",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff92"
+  },
+  "city_name": "Bilecik",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff93"
+  },
+  "city_name": "Bingöl",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff94"
+  },
+  "city_name": "Bitlis",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff95"
+  },
+  "city_name": "Bolu",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff96"
+  },
+  "city_name": "Burdur",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff97"
+  },
+  "city_name": "Bursa",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff98"
+  },
+  "city_name": "Çanakkale",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff99"
+  },
+  "city_name": "Çankırı",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff9a"
+  },
+  "city_name": "Çorum",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff9b"
+  },
+  "city_name": "Denizli",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff9c"
+  },
+  "city_name": "Diyarbakır",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff9d"
+  },
+  "city_name": "Edirne",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff9e"
+  },
+  "city_name": "Elazığ",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ff9f"
+  },
+  "city_name": "Erzincan",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffa0"
+  },
+  "city_name": "Erzurum",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffa1"
+  },
+  "city_name": "Eskişehir",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffa2"
+  },
+  "city_name": "Gaziantep",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffa3"
+  },
+  "city_name": "Giresun",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffa4"
+  },
+  "city_name": "Gümüşhane",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffa5"
+  },
+  "city_name": "Hakkari",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffa6"
+  },
+  "city_name": "Hatay",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffa7"
+  },
+  "city_name": "Isparta",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffa8"
+  },
+  "city_name": "Mersin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffa9"
+  },
+  "city_name": "İstanbul",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffaa"
+  },
+  "city_name": "İzmir",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffab"
+  },
+  "city_name": "Kars",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffac"
+  },
+  "city_name": "Kastamonu",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffad"
+  },
+  "city_name": "Kayseri",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffae"
+  },
+  "city_name": "Kırklareli",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffaf"
+  },
+  "city_name": "Kırşehir",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffb0"
+  },
+  "city_name": "Kocaeli",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffb1"
+  },
+  "city_name": "Konya",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffb2"
+  },
+  "city_name": "Kütahya",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffb3"
+  },
+  "city_name": "Malatya",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffb4"
+  },
+  "city_name": "Manisa",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffb5"
+  },
+  "city_name": "Kahramanmaraş",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffb6"
+  },
+  "city_name": "Mardin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffb7"
+  },
+  "city_name": "Muğla",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffb8"
+  },
+  "city_name": "Muş",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffb9"
+  },
+  "city_name": "Nevşehir",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffba"
+  },
+  "city_name": "Niğde",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffbb"
+  },
+  "city_name": "Ordu",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffbc"
+  },
+  "city_name": "Rize",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffbd"
+  },
+  "city_name": "Sakarya",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffbe"
+  },
+  "city_name": "Samsun",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffbf"
+  },
+  "city_name": "Siirt",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffc0"
+  },
+  "city_name": "Sinop",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffc1"
+  },
+  "city_name": "Sivas",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffc2"
+  },
+  "city_name": "Tekirdağ",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffc3"
+  },
+  "city_name": "Tokat",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffc4"
+  },
+  "city_name": "Trabzon",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffc5"
+  },
+  "city_name": "Tunceli",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffc6"
+  },
+  "city_name": "Şanlıurfa",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffc7"
+  },
+  "city_name": "Uşak",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffc8"
+  },
+  "city_name": "Van",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffc9"
+  },
+  "city_name": "Yozgat",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffca"
+  },
+  "city_name": "Zonguldak",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffcb"
+  },
+  "city_name": "Aksaray",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffcc"
+  },
+  "city_name": "Bayburt",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffcd"
+  },
+  "city_name": "Karaman",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffce"
+  },
+  "city_name": "Kırıkkale",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffcf"
+  },
+  "city_name": "Batman",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffd0"
+  },
+  "city_name": "Şırnak",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffd1"
+  },
+  "city_name": "Bartın",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffd2"
+  },
+  "city_name": "Ardahan",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffd3"
+  },
+  "city_name": "Iğdır",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffd4"
+  },
+  "city_name": "Yalova",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffd5"
+  },
+  "city_name": "Karabük",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffd6"
+  },
+  "city_name": "Kilis",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffd7"
+  },
+  "city_name": "Osmaniye",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69f8e3ef5e5bac607319ffd8"
+  },
+  "city_name": "Düzce",
+  "__v": 0
+}]
