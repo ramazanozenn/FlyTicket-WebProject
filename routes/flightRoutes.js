@@ -107,4 +107,100 @@ router.get('/booking-success/:ticketId', async (req, res) => {
     }
 });
 
+// Admin - Create/Add New Flight with Safe Constraints
+router.post('/admin/flights', async (req, res) => {
+    try {
+        const { from_city, to_city, departure_time, arrival_time, price, seats_total } = req.body;
+
+        // 1. Parse input data to integers
+        const parsedPrice = parseInt(price, 10);
+        const parsedSeats = parseInt(seats_total, 10);
+
+        // 2. Check for Not-a-Number (NaN) values
+        if (isNaN(parsedPrice) || isNaN(parsedSeats)) {
+            return res.status(400).send("Validation Error: Price and Total Seats must be valid numbers.");
+        }
+
+        // 3. Bound check for Flight Price (Max 100,000 TL)
+        if (parsedPrice < 1 || parsedPrice > 100000) {
+            return res.status(400).send("Validation Error: Flight price must be between 1 and 100,000 TL.");
+        }
+
+        // 4. Bound check for Seat Capacity (Max 400 Seats)
+        if (parsedSeats < 1 || parsedSeats > 400) {
+            return res.status(400).send("Validation Error: Total seats must be between 1 and 400.");
+        }
+
+        // 5. Create new flight instance and save to database
+        const newFlight = new Flight({
+            from_city,
+            to_city,
+            departure_time: new Date(departure_time),
+            arrival_time: new Date(arrival_time),
+            price: parsedPrice,
+            seats_total: parsedSeats
+        });
+
+        await newFlight.save();
+
+        // Redirect back to admin dashboard upon successful execution
+        res.redirect('/admin/dashboard');
+
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("An error occurred while creating the flight.");
+    }
+});
+
+// Admin - Update Flight Details with Safe Constraints
+router.post('/admin/flights/update/:id', async (req, res) => {
+    try {
+        const { from_city, to_city, departure_time, arrival_time, price, seats_total } = req.body;
+
+        // 1. Parse input data to integers
+        const parsedPrice = parseInt(price, 10);
+        const parsedSeats = parseInt(seats_total, 10);
+
+        // 2. Check for Not-a-Number (NaN) values
+        if (isNaN(parsedPrice) || isNaN(parsedSeats)) {
+            return res.status(400).send("Validation Error: Price and Total Seats must be valid numbers.");
+        }
+
+        // 3. Bound check for Flight Price (Max 100,000 TL)
+        if (parsedPrice < 1 || parsedPrice > 100000) {
+            return res.status(400).send("Validation Error: Flight price must be between 1 and 100,000 TL.");
+        }
+
+        // 4. Bound check for Seat Capacity (Max 400 Seats)
+        if (parsedSeats < 1 || parsedSeats > 400) {
+            return res.status(400).send("Validation Error: Total seats must be between 1 and 400.");
+        }
+
+        // 5. Update the flight record in the database
+        const updatedFlight = await Flight.findByIdAndUpdate(
+            req.params.id,
+            {
+                from_city,
+                to_city,
+                departure_time: new Date(departure_time),
+                arrival_time: new Date(arrival_time),
+                price: parsedPrice,
+                seats_total: parsedSeats
+            },
+            { new: true }
+        );
+
+        if (!updatedFlight) {
+            return res.status(404).send("Flight not found!");
+        }
+
+        // Redirect back to admin dashboard upon successful execution
+        res.redirect('/admin/dashboard');
+
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("An error occurred while updating the flight.");
+    }
+});
+
 module.exports = router;

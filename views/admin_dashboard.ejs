@@ -59,15 +59,29 @@
                         </div>
                         <div class="col-md-4">
                             <label class="form-label small fw-bold">Price (TL)</label>
-                            <input type="number" name="price" class="form-control" placeholder="0.00" min="1" step="0.01" required 
-                                oninvalid="this.setCustomValidity('Price must be at least 1 TL')" 
-                                oninput="this.setCustomValidity('')">                        
+                            <input type="number" 
+                                   name="price" 
+                                   class="form-control" 
+                                   placeholder="e.g., 1500" 
+                                   min="1" 
+                                   max="100000" 
+                                   step="1" 
+                                   required 
+                                   oninvalid="this.setCustomValidity('Price must be a whole number between 1 and 100,000 TL')" 
+                                   oninput="this.setCustomValidity('')">                        
                         </div>
                         <div class="col-md-4">
                             <label class="form-label small fw-bold">Total Seats</label>
-                            <input type="number" name="seats_total" class="form-control" placeholder="150" min="1" required 
-                                oninvalid="this.setCustomValidity('Total seats must be at least 1')" 
-                                oninput="this.setCustomValidity('')">                        
+                            <input type="number" 
+                                   name="seats_total" 
+                                   class="form-control" 
+                                   placeholder="150" 
+                                   min="1" 
+                                   max="400" 
+                                   step="1" 
+                                   required 
+                                   oninvalid="this.setCustomValidity('Total seats must be a whole number between 1 and 400')" 
+                                   oninput="this.setCustomValidity('')">                        
                         </div>
                         <div class="col-md-4 d-flex align-items-end">
                             <button type="submit" class="btn btn-primary w-100 fw-bold py-2">CREATE FLIGHT</button>
@@ -101,8 +115,8 @@
                                     <i class="fas fa-long-arrow-alt-right mx-2 text-muted small"></i> 
                                     <span class="fw-bold"><%= f.to_city %></span>
                                 </td>
-                                <td><%= new Date(f.departure_time).toLocaleString('tr-TR') %></td>
-                                <td><%= new Date(f.arrival_time).toLocaleString('tr-TR') %></td>
+                                <td><%= new Date(f.departure_time).toLocaleString('en-US') %></td>
+                                <td><%= new Date(f.arrival_time).toLocaleString('en-US') %></td>
                                 <td class="fw-bold text-success"><%= f.price %> TL</td>
                                 <td class="text-end pe-4">
                                     <div class="d-flex gap-2 justify-content-end">
